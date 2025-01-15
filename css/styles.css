@@ -38,20 +38,48 @@ img {
     height: auto;
 }
 
+.section {
+    padding: 36px 0;
+}
 
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
 /* Header */
 
+.header {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 14px;
+    min-width: 320px;
+    max-width: 1020px;
+
+}
+
+.header-nav{
+    display: flex;
+}
 
 .logo {
     color: var(--c-text);
     font-size: 18px;
 }
 
+.nav-list {
+display: flex;
+}
+
 .nav-link {
     color: #111;
     font-size: 14px;
     text-decoration: none;
+}
+
+.menu-icon{
+    fill: (var(--c-text));
 }
 
 .hero-section {
