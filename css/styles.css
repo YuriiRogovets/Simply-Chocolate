@@ -3,7 +3,9 @@
     --c-text: #111;
     --c-dark: #1E1823;
     --c-wite: #FFF;
-    --c-bgc-wite:#FAFAFA;;
+    --c-bgc-wite:#FAFAFA;
+    --c-wite-70: #ffffffb3;
+    --c-wite-50: #ffffff80;
 }
 
 body {
@@ -43,9 +45,17 @@ img {
 }
 
 .container {
-    max-width: 900px;
+    min-width: 320px;
+    max-width: 375px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+@media screen and (min-width: 768px) {
+.container {
+        max-width: 704px;
+        padding: 0 32px;
+    }
 }
 
 /* Header */
@@ -76,11 +86,30 @@ display: flex;
     color: #111;
     font-size: 14px;
     text-decoration: none;
+}   
+
+.header-social-link{
+    stroke: var(--c-text);
+    fill: none;
+    transition: 0.2s;
 }
 
-.menu-icon{
-    fill: (var(--c-text));
+.header-social-link:hover {
+    stroke: var(--c-brand);
 }
+
+.menu-burger {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    width: 28px;
+    height: 28px;
+    stroke: var(--c-text);
+
+}
+
+
+/* Hero section */
 
 .hero-section {
     background-color: dimgray;
@@ -102,3 +131,73 @@ border: none;
     background-color: #FCF1E0;
     
 }
+
+/* Benefits section */
+
+.benefits-section{
+    padding: 20px 0;
+    background-color: var(--c-dark);
+}
+
+.benefits-container{
+    min-width: 320px;
+    max-width: 375px;
+}
+
+
+
+.benefits-title {
+visibility: hidden;
+
+}
+
+.benefits-list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;   
+}
+
+.benefits-sub-title {
+    color: var(--c-wite);
+}
+
+.benefits-item{
+    display: flex;
+    flex-direction: column;
+    padding-right: 28px;
+
+}
+
+.benefits-icon-wrapper{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+  border: 1px solid var(--c-wite-50);
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  margin-bottom: 22px;
+}
+
+.benefits-icon {
+    stroke: var(--c-brand);
+    fill: var(--c-brand);
+}
+
+.benefits-sub-title{
+    font-weight: 600;
+    font-size: 18px; 
+    line-height: normal;
+    margin-bottom: 18px;
+
+}
+
+
+.benefits-text{
+    color: var(--c-wite-70);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.21;
+    letter-spacing: -0.02em;
+}
+
