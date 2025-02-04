@@ -78,35 +78,76 @@ img {
 
 /* Header */
 
-.header {
-    display: flex;
-    padding-top: 20px;
-    padding-bottom: 14px;
-    min-width: 320px;
-    max-width: 1020px;
 
+
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0 14px;
 }
 
 .header-nav{
-    display: flex;
+    display: inline-flex;
+    align-items: center;
+    
 }
 
-.logo {
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 4px;
     color: var(--c-text);
     font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: -0.03em;
+}
+
+.logo-accent{
+    font-style: italic;
+}
+
+.logo-icon {
+    width: 24px;
+    height: 24px;
 }
 
 .nav-list {
-display: flex;
-}
+display: none;
+gap: 24px;
+margin-left: 188px;
 
-.nav-link {
-    color: #111;
-    font-size: 14px;
-    text-decoration: none;
 }   
 
+.nav-link {
+    color: var(--c-text);
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 500;
+    line-height: 1.11;
+    letter-spacing: -0.02em;
+    padding: 24px 0;
+    
+}   
+
+.nav-link :hover {
+    cursor: pointer;
+    transition: var(--c-brand);
+    
+}
+
+
+
+.heder-social-wrapper{
+    display: flex;  
+    gap: 18px;
+    margin-left: 24px;
+}
+
 .header-social-link{
+    display: none;
     stroke: var(--c-text);
     fill: none;
     transition: 0.2s;
@@ -117,15 +158,48 @@ display: flex;
 }
 
 .menu-burger {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     padding: 0;
     width: 28px;
     height: 28px;
     stroke: var(--c-text);
+    margin-left: auto;
+}
+
+@media screen and (min-width: 768px) {
+
+.header-wrapper {
+        padding: 24px 0;
+    }
+
+.menu-burger {
+    width: 32px;
+    height: 32px;
+}
+}
+
+@media screen and (min-width: 1156px) {
+
+.header-wrapper{
+    margin-bottom: 8px;
+}
+    
+.menu-burger {
+        display: none;
+    }
+
+.nav-list {
+    display: flex;
+}
+
+.header-social-link {
+    display: flex;
+}
 
 }
 
+/* end Header */
 
 /* Hero section */
 
